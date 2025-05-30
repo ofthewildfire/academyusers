@@ -4,3 +4,6 @@
 1.0.3:
     - 'Add organization, city_state, and reason_for_joining fields to the Users table'
     - create_academy_user_fields.php 
+1.0.4:
+    - 'Recreate academy user fields in database'
+    - create_academy_user_fields.php 

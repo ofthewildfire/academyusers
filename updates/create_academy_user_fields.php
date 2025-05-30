@@ -9,9 +9,15 @@ class CreateAcademyUserFields extends Migration
     {
         Schema::table('users', function($table)
         {
-            $table->string('organization')->nullable();
-            $table->string('city_state')->nullable();
-            $table->text('reason_for_joining')->nullable();
+            if (!Schema::hasColumn('users', 'organization')) {
+                $table->string('organization')->nullable();
+            }
+            if (!Schema::hasColumn('users', 'city_state')) {
+                $table->string('city_state')->nullable();
+            }
+            if (!Schema::hasColumn('users', 'reason_for_joining')) {
+                $table->text('reason_for_joining')->nullable();
+            }
         });
     }
 
@@ -19,11 +25,15 @@ class CreateAcademyUserFields extends Migration
     {
         Schema::table('users', function($table)
         {
-            $table->dropColumn([
-                'organization',
-                'city_state',
-                'reason_for_joining'
-            ]);
+            if (Schema::hasColumn('users', 'organization')) {
+                $table->dropColumn('organization');
+            }
+            if (Schema::hasColumn('users', 'city_state')) {
+                $table->dropColumn('city_state');
+            }
+            if (Schema::hasColumn('users', 'reason_for_joining')) {
+                $table->dropColumn('reason_for_joining');
+            }
         });
     }
 } 

@@ -1,5 +1,5 @@
 {
-    "name": "ofthewildfire/academyusers",
+    "name": "ofthewildfire/academyusers-plugin",
     "type": "october-plugin",
     "description": "Extends the OctoberCMS Users plugin with additional fields for academy members",
     "license": "MIT",
