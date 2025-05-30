@@ -55,6 +55,34 @@ class Plugin extends PluginBase
                 ]
             ]);
         });
+
+        // Add columns to the Users list
+        UsersController::extendListColumns(function($list, $model) {
+            if (!$model instanceof UserModel) {
+                return;
+            }
+
+            $list->addColumns([
+                'organization' => [
+                    'label' => 'Organization',
+                    'type' => 'text',
+                    'searchable' => true,
+                    'sortable' => true
+                ],
+                'city_state' => [
+                    'label' => 'City/State',
+                    'type' => 'text',
+                    'searchable' => true,
+                    'sortable' => true
+                ],
+                'reason_for_joining' => [
+                    'label' => 'Reason for Joining',
+                    'type' => 'text',
+                    'searchable' => true,
+                    'sortable' => true
+                ]
+            ]);
+        });
     }
 
     public function registerComponents()

@@ -1,3 +1,6 @@
 1.0.2:
     - 'Update repository configuration and prepare for Packagist'
     - create_academy_user_fields.php 
+1.0.3:
+    - 'Add organization, city_state, and reason_for_joining fields to the Users table'
+    - create_academy_user_fields.php 
