@@ -1,4 +1,4 @@
-<?php namespace academyusers\Components;
+<?php namespace ofthewildfire\academyusers\Components;
 
 use Cms\Classes\ComponentBase;
 use RainLab\User\Models\User as UserModel;

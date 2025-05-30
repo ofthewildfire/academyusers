@@ -1,4 +1,4 @@
-<?php namespace academyusers;
+<?php namespace ofthewildfire\academyusers;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -60,7 +60,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'academyusers\Components\ProfileForm' => 'profileForm'
+            'ofthewildfire\academyusers\Components\ProfileForm' => 'profileForm'
         ];
     }
 } 
